@@ -205,12 +205,12 @@
 		</tbody>
 	</table>
 	<p class="mt-3">
-		Learning policies that effectively utilize language instructions in complex, multitask environments is an important problem in imitation learning. While it is
+		Learning policies that effectively utilize language instructions in complex, multitask environments is an important problem in sequential decision-making. While it is
         possible to condition on the entire language instruction directly, such an approach
         could suffer from generalization issues. To encode complex instructions into skills
         that can generalize to unseen instructions, we propose <em><strong>Learning Interpretable Skill
         Abstractions (LISA)</strong></em>, a hierarchical imitation learning framework that can learn
-        diverse, interpretable skills from language-conditioned demonstrations. LISA uses
+        diverse, interpretable <em><strong>primitive behaviors or skills</strong></em> from language-conditioned demonstrations. LISA uses
         vector quantization to learn discrete skill codes that are highly correlated with
         language instructions and the behavior of the learned policy. In navigation and
         robotic manipulation environments, <em>LISA outperforms a strong non-hierarchical
