@@ -1,0 +1,48 @@
+# @package _global_
+
+env:
+  name: BabyAI-GoTo-v0
+  state_dim: 147     
+  action_dim: 7
+  discrete: True
+  use_direction: True
+  eval_offline: False 
+  eval_episode_factor: 2
+  # Eval on GoToSeq environment
+  eval_env: # BabyAI-GoToSeq-v0
+  skip_words: ['go', 'to', 'the', 'a', '[SEP]']
+
+train_dataset:
+  expert_location: '/atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}.pkl'
+  num_trajectories: 100000
+  normalize_states: False
+  no_lang: False
+  seed: ${seed}
+
+val_dataset:
+  expert_location: '/atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}_valid.pkl'
+  num_trajectories: ${trainer.num_eval_episodes}
+  normalize_states: False
+  seed: ${seed}
+
+option_selector:    
+  num_options: 10
+  option_transformer:
+    hidden_size: 144
+    n_layer: 2
+    n_head: 4
+    max_length:
+    max_ep_len:
+    activation_function: 'relu'
+    n_positions: 1024
+    dropout: 0.1
+    output_attention: False
+
+dt:
+    hidden_size: 128
+    n_layer: 2
+    n_head: 4
+    activation_function: 'relu'
+    n_positions: 1024
+    dropout: 0.1
+    option_il: false

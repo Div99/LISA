@@ -1,0 +1,54 @@
+# @package _global_
+
+env:
+  name: BabyAI-BossLevel-v0
+  state_dim: 147
+  action_dim: 7
+  discrete: True
+  use_direction: True
+  eval_offline: False 
+  eval_episode_factor: 2
+  skip_words: ['to', 'the', 'a', '[SEP]']
+  eval_env:
+
+train_dataset:
+  expert_location: /atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}.pkl
+  num_trajectories: 100000
+  normalize_states: False
+  seed: ${seed}
+  no_lang: False
+
+val_dataset:
+  expert_location: /atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}_valid.pkl
+  num_trajectories: ${trainer.num_eval_episodes}
+  normalize_states: False
+  seed: ${seed}
+
+option_selector:    
+  horizon: ${model.horizon}
+  use_vq: True
+  kmeans_init: True
+  commitment_weight: 20
+  num_options: 100
+  num_hidden: 2
+  option_transformer:
+    hidden_size: 128
+    n_layer: 1
+    n_head: 4
+    max_length:
+    max_ep_len:
+    activation_function: 'relu'
+    n_positions: 1024
+    dropout: 0.1
+    output_attention: False
+
+dt:
+    hidden_size: 128
+    n_layer: 1
+    n_head: 4
+    option_il: False
+    activation_function: 'relu'
+    n_positions: 1024
+    dropout: 0.1
+    no_actions: False
+    no_states: False

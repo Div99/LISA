@@ -1,0 +1,24 @@
+# @package _global_
+
+env:
+  name: BabyAI-SynthLoc-v0
+  state_dim: 147     
+  action_dim: 7
+  discrete: True
+  use_direction: True
+  eval_offline: False 
+  eval_env: 
+  eval_episode_factor: 3
+
+train_dataset:
+  expert_location: '/atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}.pkl'
+  num_trajectories: 5000
+  normalize_states: False
+  seed: ${seed}
+  no_lang: False
+
+val_dataset:
+  expert_location: '/atlas/u/divgarg/datasets/babyai/demos_iclr19_v2/${env.name}_valid.pkl'
+  num_trajectories: ${trainer.num_eval_episodes}
+  normalize_states: False
+  seed: ${seed}
