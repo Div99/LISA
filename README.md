@@ -28,7 +28,7 @@ Learning policies that effectively utilize language instructions in complex, mul
 
 ## Code
 
-To be released soon.
+To install and use LISA check the instructions provided in the [lisa](lisa) folder.
 
 ## Learnt Skills
 Skill heatmap showing the corresponding word frequencies for each learned skill code from 0-99 on BabyAI BossLevel task.
