@@ -1,0 +1,19 @@
+__pycache__/
+outputs/
+checkpoints/
+wandb/
+alfred/data
+alfworld/storage
+eval_*/
+alfred/exp
+lorel
+metaworld
+hrl/gifs
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+.venv
+.vscode
+
+babyai/babyai.egg-info/
