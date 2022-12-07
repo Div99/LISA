@@ -4,7 +4,7 @@
 
 
 <p align="center">
-<a href="https://div99.github.io/IQ-Learn">
+<a href="https://div99.github.io/LISA">
 <img style="height: 500px" src="docs/approach.png">
 </a>
 </p>
@@ -16,7 +16,7 @@ Learning policies that effectively utilize language instructions in complex, mul
  ### Citation
 ```
 @inproceedings{
-    garg2022lisa,
+    lisa2022,
     title={{LISA}: Learning Interpretable Skill Abstractions from Language},
     author={Divyansh Garg and Skanda Vaidyanath and Kuno Kim and Jiaming Song and Stefano Ermon},
     booktitle={Advances in Neural Information Processing Systems},
@@ -35,6 +35,9 @@ Skill heatmap showing the corresponding word frequencies for each learned skill 
 
 ![Grid](docs/heatmap.png)
 
+Skill word clouds showing the words correlated to independent skills learned by LISA on the LORL benchmark.
+
+![Grid](docs/learned-skills.png)
 
 ## Questions
 Please feel free to email us if you have any questions. 
