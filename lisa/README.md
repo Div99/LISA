@@ -30,6 +30,7 @@ You can also change the environment by setting `env=babyai/BossLevel` or `env=lo
 There are several other configuration options available in the folder `hrl/conf` that allows you to remove vector quantization, change the number of skill codes and dimension of skill codes, change the horizon, change the commitment weight, etc. The configurations are specified with YAML files and we use [hydra](https://hydra.cc/).
 
 Here is a sample command for the LORL dataset with some different falgs set:
+
 `main.py env=lorel_sawyer_obs method=traj_option dt.n_layer=1 dt.n_head=4 option_selector.option_transformer.n_layer=1 option_selector.option_transformer.n_head=4 option_selector.option_transformer.hidden_size=128 batch_size=256 seed=1 warmup_steps=5000`
 
 The hyperparameters needed to reproduce the experiments are in [Appendix D of the paper](https://arxiv.org/pdf/2203.00054.pdf).
