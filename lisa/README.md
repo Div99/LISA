@@ -16,7 +16,7 @@ Contains scripts to reproduce experiments.
 
 ## Instructions
 
-Our code for running LISA experiments is present in ``hrl` folder.
+Our code for running LISA experiments is present in `hrl` folder.
 
 Detailed instructions for running and reproducing our experiments will be coming soon.
 <!-- See corresponding READMEs in each folder for instructions; scripts should be run from the respective directories.
