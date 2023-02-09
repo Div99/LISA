@@ -329,7 +329,7 @@ class Trainer:
                                 with open(f'{render_path}/episode_{r}_{instr}_options.txt', 'w') as fp:
                                     fp.write(str(options_list))
 
-                            dists.append(-episode_return)
+                            dists.append(episode_return)
                             lengths.append(episode_length)
                             successes.append(success)
                             instr_wise_stats[orig_instr].append(success)
