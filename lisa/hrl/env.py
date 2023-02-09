@@ -310,7 +310,7 @@ class LorlWrapper(gym.Wrapper):
         success = 0
         if s:
             success = 1
-            reward = -dist
+            reward = dist
 
         info.update({'success': success})
         return self.get_state(im), reward, s, info
